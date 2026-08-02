@@ -1,8 +1,32 @@
 {
-	"dependencies": {
-		"axios": "^1.18.1"
-	},
-	"devDependencies": {
-		"webpack-bundle-analyzer": "^5.3.1"
-	}
+  "name": "node",
+  "version": "1.0.0",
+  "description": "‌Node.js是一个基于Chrome V8引擎的JavaScript运行环境，它使用了一个事件驱动、非阻塞式I/O模型，使其轻量又高效。Node.js的包管理器npm是世界上最大的开源库生态系统。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lql6639/Node.js.git"
+  },
+  "keywords": [
+    "node",
+    "lql6639",
+    "liqinglin83721"
+  ],
+  "author": "liqinglin",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lql6639/Node.js/issues"
+  },
+  "homepage": "https://github.com/lql6639/Node.js#readme",
+  "dependencies": {
+    "axios": "^1.19.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.109.2",
+    "webpack-bundle-analyzer": "^5.3.1"
+  }
 }

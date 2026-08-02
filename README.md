@@ -1,9 +1,9 @@
 
 ## 1、Node.js
 
-Node.js 是一个让 JavaScript 能在服务器端运行的环境‌，它让前端开发者也能用熟悉的语言写后端程序。‌‌‌
++ 1、Node.js 是一个让 JavaScript 能在服务器端运行的环境‌，它让前端开发者也能用熟悉的语言写后端程序。‌‌‌
 
-Node.js 不是编程语言本身，而是‌JavaScript 的运行时环境‌，就像浏览器能运行JavaScript一样，它让JavaScript也能在服务器、命令行等地方跑起来。它基于Chrome的V8引擎开发，是开源跨平台的工具。‌‌‌
++ 2、Node.js 不是编程语言本身，而是‌JavaScript 的运行时环境‌，就像浏览器能运行JavaScript一样，它让JavaScript也能在服务器、命令行等地方跑起来。它基于Chrome的V8引擎开发，是开源跨平台的工具。‌‌‌
 
 ## 2、Node.js 下载安装
 
@@ -11,25 +11,45 @@ Node.js 不是编程语言本身，而是‌JavaScript 的运行时环境‌，�
 
 ## 3、使用nvm控制node版本
 
-#### 当前使用的node版本
++ 1、当前使用的node版本
 
 ```bash
-nvm list
+nvm ls
 ```
 
-#### 切换任意的node版本
++ 2、切换任意的node版本
 
 ```bash
 nvm use 版本号
 ```
 
-#### 配置文件恢复node版本
++ 3、配置文件恢复node版本
 
 ```bash
-在搭建工程根目录下加一个 .nvmrc 配置文件 写上搭建的node版本
+在当前搭建工程根目录下加一个 .nvmrc 配置文件 写上当前搭建工程的node版本
 ```
 
-## 4、pnpm
+## 4、使用nrm切换镜像源
+
++ 1、安装
+
+```bash
+npm install -g nrm
+```
+
++ 2、查看所有可用的镜像源
+
+```bash
+nrm ls
+```
+
++ 3、切换镜像源为 taobao 镜像
+
+```bash
+nrm use taobao
+```
+
+## 5、pnpm
 
 **pnpm包管理工具**
 
@@ -57,16 +77,22 @@ pnpm -v
 
 + 3、设置镜像源
 
-> 获取当前配置的镜像地址
+> 查看当前配置的镜像源
 
 ```shell
-pnpm config get registry
+npm config get registry
 ```
 
-> 设置新的镜像地址
+> 设置新的镜像源
 
 ```shell
-pnpm config set registry https://registry.npm.taobao.org/
+npm config set registry https://registry.npmmirror.com/
+```
+
+> 检查新的镜像源是否设置成功
+
+```shell
+npm config get registry
 ```
 
 + 4、常用命令对比
@@ -107,12 +133,12 @@ pnpm remove (包名) 移除指定包
 pnpm run 脚本 运行脚本
 ```
 
-## 5、依赖检查工具 - depcheck
+## 6、依赖检查工具 - depcheck
 
 + 1、安装
 
 ```shell
-pnpm install -g depcheck
+npm install -g depcheck
 ```
 
 + 2、在项目中使用 Depcheck 检查依赖
@@ -124,5 +150,19 @@ depcheck
 + 3、安装缺失依赖
 
 ```shell
-pnpm install [缺失的依赖]
+npm install [缺失的依赖]
+```
+
+## 7、md文档转换为html页面工具 - i5ting_toc
+
++ 1、安装
+
+```shell
+npm install -g i5ting_toc
+```
+
++ 2、实现 md 转 html
+
+```shell
+i5ting_toc -f README.md -o
 ```
