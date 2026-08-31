@@ -6,11 +6,11 @@ fs.readFile('files/readFile.txt', 'utf8', (err, data) => {
     console.error(err)
     return
   }
-  console.log(data)
+  console.log('读取文件内容成功：' + data)
 })
 
 // 写入文件内容
-fs.writeFile('writeFile.txt', 'Hello Node.js', (err) => {
+fs.writeFile('files/writeFile.txt', 'Hello Node.js', (err) => {
   if (err) {
     console.error(err)
     return

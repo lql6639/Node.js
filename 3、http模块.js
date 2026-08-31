@@ -1,5 +1,5 @@
 const http = require('http')   // http模块
-const path = require('path')
+const path = require('path')   // 路径模块
 
 // 创建 web 服务器
 const server = http.createServer()
@@ -41,5 +41,5 @@ server.on('request', (req, res) => {
 
 // 启动服务器，监听端口
 server.listen(80, () => {
-  console.log('Server is running at http://localhost')
+  console.log('Server is running at http://127.0.0.1')
 })
